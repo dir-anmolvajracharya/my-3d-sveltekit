@@ -33,6 +33,9 @@ importers:
       '@iconify-json/fa6-brands':
         specifier: ^1.1.22
         version: 1.1.22
+      '@iconify-json/ic':
+        specifier: ^1.1.18
+        version: 1.1.18
       '@slicemachine/adapter-sveltekit':
         specifier: ^0.3.46
         version: 0.3.46(@prismicio/types@0.2.9)(@sveltejs/kit@2.5.24(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.2(@types/node@22.5.0)))(svelte@4.2.19)(vite@5.4.2(@types/node@22.5.0)))(@types/uuid@9.0.8)(prettier-plugin-svelte@3.2.6(prettier@3.3.3)(svelte@4.2.19))(prettier@3.3.3)(svelte@4.2.19)(uuid@9.0.1)
@@ -316,6 +319,9 @@ packages:
 
   '@iconify-json/fa6-brands@1.1.22':
     resolution: {integrity: sha512-a7x0hTjNI/cQ1XFyRQCyFfXJbYboYDRSmxeNgImRi8WwREDi00/U1e2WH+Xc4zBDFixBj/PQ5VOfCDaNy2ELTw==}
+
+  '@iconify-json/ic@1.1.18':
+    resolution: {integrity: sha512-RcfnSFVmQP6aEKQJM3Iczg9e5TXWlN0slIjiyH9l378YkhDPAhXdQ8xP8+tBwfz7B9jysqsV+vs9Iu8DMHvE6Q==}
 
   '@iconify/types@2.0.0':
     resolution: {integrity: sha512-+wluvCrRhXrhyOmRDJ3q8mux9JkKy5SJ/v8ol2tu4FVjyYvtEzkc/3pK15ET6RKg4b4w4BmTk1+gsCUhf21Ykg==}
@@ -2783,6 +2789,10 @@ snapshots:
   '@humanwhocodes/retry@0.3.0': {}
 
   '@iconify-json/fa6-brands@1.1.22':
+    dependencies:
+      '@iconify/types': 2.0.0
+
+  '@iconify-json/ic@1.1.18':
     dependencies:
       '@iconify/types': 2.0.0
 
