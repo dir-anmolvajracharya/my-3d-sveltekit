@@ -1,9 +1,11 @@
 <script>
-	import "../app.css";
+	import '../app.css';
 	import { PrismicPreview } from '@prismicio/svelte/kit';
 	import { page } from '$app/stores';
 	import { repositoryName } from '$lib/prismicio';
-	import Footer from "$lib/components/Footer.svelte";
+	import Footer from '$lib/components/Footer.svelte';
+
+	export let data;
 </script>
 
 <svelte:head>
@@ -25,6 +27,8 @@
 	<slot />
 </main>
 <div class="background-gradient absolute inset-0 -z-50 max-h-screen" />
-<div class="pointer-events-none absolute inset-0 -z-40 h-full bg-[url('noisetexture.jpg')] opacity-20 mix-blend-soft-light"></div>
-<Footer />
+<div
+	class="pointer-events-none absolute inset-0 -z-40 h-full bg-[url('noisetexture.jpg')] opacity-20 mix-blend-soft-light"
+></div>
+<Footer settings={data.settings} />
 <PrismicPreview {repositoryName} />
