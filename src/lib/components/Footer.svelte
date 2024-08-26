@@ -5,11 +5,12 @@
 	import IconTwitter from '~icons/fa6-brands/x-twitter';
 	import IconLinkedin from '~icons/fa6-brands/linkedin';
 	import IconInstagram from '~icons/fa6-brands/instagram';
+	import Bounded from './Bounded.svelte';
 
 	export let settings: Content.SettingsDocument;
 </script>
 
-<footer class="text-slate-600">
+<Bounded as="footer" class="text-slate-600">
 	<div
 		class="container mx-auto flex mt-20 flex-col items-center justify-between gap-6 py-8 sm:flex-row"
 	>
@@ -87,4 +88,4 @@
 			{/if}
 		</div>
 	</div>
-</footer>
+</Bounded>
