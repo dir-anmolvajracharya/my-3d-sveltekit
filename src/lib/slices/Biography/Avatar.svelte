@@ -67,8 +67,5 @@
 	.avatar {
 		perspective: 500px;
 		perspective-origin: 150% 150%;
-		&-image {
-			transition: transform 0.2s ease-in-out;
-		}
 	}
 </style>
