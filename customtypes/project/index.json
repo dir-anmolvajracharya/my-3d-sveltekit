@@ -1,25 +1,37 @@
 {
-	"id": "page",
-	"label": "Page",
 	"format": "page",
+	"id": "project",
+	"label": "Project",
 	"repeatable": true,
 	"status": true,
 	"json": {
 		"Main": {
-			"uid": {
-				"type": "UID",
+			"date": {
+				"type": "Date",
 				"config": {
-					"label": "UID",
+					"label": "Date",
 					"placeholder": ""
 				}
 			},
+			"uid": {
+				"type": "UID",
+				"config": {
+					"label": "UID"
+				}
+			},
+			"hover_image": {
+				"type": "Image",
+				"config": {
+					"label": "Hover Image",
+					"constraint": {},
+					"thumbnails": []
+				}
+			},
 			"title": {
-				"type": "StructuredText",
+				"type": "Text",
 				"config": {
 					"label": "Title",
-					"placeholder": "",
-					"allowTargetBlank": true,
-					"single": "heading1"
+					"placeholder": ""
 				}
 			},
 			"slices": {
@@ -27,19 +39,10 @@
 				"fieldset": "Slice Zone",
 				"config": {
 					"choices": {
-						"content_index": {
+						"image_block": {
 							"type": "SharedSlice"
 						},
-						"experience": {
-							"type": "SharedSlice"
-						},
-						"tech_list": {
-							"type": "SharedSlice"
-						},
-						"biography": {
-							"type": "SharedSlice"
-						},
-						"hero": {
+						"rich_text": {
 							"type": "SharedSlice"
 						}
 					}
@@ -48,29 +51,29 @@
 		},
 		"SEO & Metadata": {
 			"meta_title": {
-				"type": "Text",
 				"config": {
 					"label": "Meta Title",
 					"placeholder": "A title of the page used for social media and search engines"
-				}
+				},
+				"type": "Text"
 			},
 			"meta_description": {
-				"type": "Text",
 				"config": {
 					"label": "Meta Description",
 					"placeholder": "A brief summary of the page"
-				}
+				},
+				"type": "Text"
 			},
 			"meta_image": {
-				"type": "Image",
 				"config": {
-					"label": "Meta Image",
 					"constraint": {
-						"width": 2400,
-						"height": 1260
+						"height": 1260,
+						"width": 2400
 					},
+					"label": "Meta Image",
 					"thumbnails": []
-				}
+				},
+				"type": "Image"
 			}
 		}
 	}

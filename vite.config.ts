@@ -3,6 +3,9 @@ import { defineConfig } from 'vite';
 import Icons from 'unplugin-icons/vite';
 
 export default defineConfig({
+	ssr: {
+		noExternal: ['three']
+	},
 	plugins: [
 		sveltekit(),
 		Icons({
@@ -15,8 +18,5 @@ export default defineConfig({
 			// Allow access to files from the project root.
 			allow: ['..']
 		}
-	},
-	ssr: {
-		noExternal: ['three']
 	}
 });

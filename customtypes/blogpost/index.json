@@ -1,19 +1,11 @@
 {
 	"format": "page",
-	"id": "blog_post",
-	"label": "Blog Post",
+	"id": "blogpost",
+	"label": "Blogpost",
 	"repeatable": true,
 	"status": true,
 	"json": {
 		"Main": {
-			"hover_image": {
-				"type": "Image",
-				"config": {
-					"label": "Hover Image",
-					"constraint": {},
-					"thumbnails": []
-				}
-			},
 			"uid": {
 				"type": "UID",
 				"config": {
@@ -25,6 +17,14 @@
 				"config": {
 					"label": "Date",
 					"placeholder": ""
+				}
+			},
+			"hover_image": {
+				"type": "Image",
+				"config": {
+					"label": "Hover Image",
+					"constraint": {},
+					"thumbnails": []
 				}
 			},
 			"title": {
