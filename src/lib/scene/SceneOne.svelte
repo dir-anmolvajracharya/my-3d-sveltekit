@@ -11,7 +11,7 @@
 </script>
 
 <T.PerspectiveCamera makeDefault position={[10, 1, 0]} zoom={2} fov={50}>
-	<OrbitControls autoRotate enableDamping autoRotateSpeed={0.3} />
+	<OrbitControls autoRotate enableDamping autoRotateSpeed={0.3} enableZoom={false} />
 </T.PerspectiveCamera>
 <!-- <Sky /> -->
 
@@ -22,7 +22,8 @@
 
 <!-- <T.GridHelper /> -->
 
-<Fujifilm position={[0, 1, 0]} scale={20} />
+<Fujifilm position={[0, 0, 0]} scale={20} />
 <!-- <FreeMercHovercar position={[0, 1, 0]} scale={2} /> -->
 
+<!-- <Environment path="/hdr/" format="hdr" isBackground={false} files="metro_noord_1k.hdr" /> -->
 <Environment path="/" format="hdr" isBackground={false} files="smallroom.hdr" />
