@@ -29,7 +29,7 @@
 					{item.institution}
 				</span>
 			</p>
-			<div class="pros pros-lg pros invert mt-4">
+			<div class="prose prose-lg prose-invert mt-4">
 				<PrismicRichText field={item.description} />
 			</div>
 		</div>
