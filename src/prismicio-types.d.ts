@@ -754,9 +754,105 @@ export type HeroSliceDefault = prismic.SharedSliceVariation<
 >;
 
 /**
+ * Primary content in *Hero → With Camera → Primary*
+ */
+export interface HeroSliceWithCameraPrimary {
+	/**
+	 * First Name field in *Hero → With Camera → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.withCamera.primary.first_name
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	first_name: prismic.KeyTextField;
+
+	/**
+	 * Last Name field in *Hero → With Camera → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.withCamera.primary.last_name
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	last_name: prismic.KeyTextField;
+
+	/**
+	 * Tag Line field in *Hero → With Camera → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.withCamera.primary.tag_line
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	tag_line: prismic.KeyTextField;
+}
+
+/**
+ * With Camera variation for Hero Slice
+ *
+ * - **API ID**: `withCamera`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSliceWithCamera = prismic.SharedSliceVariation<
+	'withCamera',
+	Simplify<HeroSliceWithCameraPrimary>,
+	never
+>;
+
+/**
+ * Primary content in *Hero → With Car → Primary*
+ */
+export interface HeroSliceWithCarPrimary {
+	/**
+	 * First Name field in *Hero → With Car → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.withCar.primary.first_name
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	first_name: prismic.KeyTextField;
+
+	/**
+	 * Last Name field in *Hero → With Car → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.withCar.primary.last_name
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	last_name: prismic.KeyTextField;
+
+	/**
+	 * Tag Line field in *Hero → With Car → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: hero.withCar.primary.tag_line
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	tag_line: prismic.KeyTextField;
+}
+
+/**
+ * With Car variation for Hero Slice
+ *
+ * - **API ID**: `withCar`
+ * - **Description**: Default
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeroSliceWithCar = prismic.SharedSliceVariation<
+	'withCar',
+	Simplify<HeroSliceWithCarPrimary>,
+	never
+>;
+
+/**
  * Slice variation for *Hero*
  */
-type HeroSliceVariation = HeroSliceDefault;
+type HeroSliceVariation = HeroSliceDefault | HeroSliceWithCamera | HeroSliceWithCar;
 
 /**
  * Hero Shared Slice
@@ -966,8 +1062,12 @@ declare module '@prismicio/client' {
 			ExperienceSliceDefault,
 			HeroSlice,
 			HeroSliceDefaultPrimary,
+			HeroSliceWithCameraPrimary,
+			HeroSliceWithCarPrimary,
 			HeroSliceVariation,
 			HeroSliceDefault,
+			HeroSliceWithCamera,
+			HeroSliceWithCar,
 			ImageBlockSlice,
 			ImageBlockSliceDefaultPrimary,
 			ImageBlockSliceVariation,

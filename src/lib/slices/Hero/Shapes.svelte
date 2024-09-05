@@ -3,8 +3,6 @@
 	import * as THREE from 'three';
 	import Geometry from './Geometry.svelte';
 	import { ContactShadows, Environment, interactivity, transitions } from '@threlte/extras';
-	import Fujifilm from '$lib/models/fujifilm.svelte';
-	import FreeMercHovercar from '$lib/models/free_merc_hovercar.svelte';
 
 	interactivity();
 	transitions();
@@ -23,13 +21,8 @@
 
 <ContactShadows position={[0, -3.5, 0]} opactiy={0.65} scale={40} blur={1} far={9} />
 
-<!-- Camera -->
-<Fujifilm position={[0, 0, 0]} scale={40} />
-<!-- Car -->
-<!-- <FreeMercHovercar position={[0, 0, 0]} scale={2} /> -->
-
 <!-- Gem -->
-<!-- <Geometry position={[0, 0, 0]} rate={0.3} geometry={new THREE.IcosahedronGeometry(3)} /> -->
+<Geometry position={[0, 0, 0]} rate={0.3} geometry={new THREE.IcosahedronGeometry(3)} />
 
 <!-- Pill -->
 <Geometry

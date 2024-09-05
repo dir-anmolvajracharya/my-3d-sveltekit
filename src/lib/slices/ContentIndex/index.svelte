@@ -7,7 +7,7 @@
 
 	export let slice: Content.ContentIndexSlice;
 
-	export let items: Content.BlogPostDocument[] | Content.ProjectDocument[];
+	export let items: Content.BlogpostDocument[] | Content.ProjectDocument[];
 </script>
 
 <Bounded data-slice-type={slice.slice_type} data-slice-variation={slice.variation}>
